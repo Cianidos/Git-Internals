@@ -1,0 +1,38 @@
+<h5>Description</h5>
+
+<p>Let's start with watching a comprehensive <a target="_blank" href="https://www.youtube.com/watch?v=P6jD966jzlk" rel="noopener noreferrer nofollow">introductory video from Gitlab</a>. You can also check out a written <a target="_blank" href="https://git-scm.com/book/en/v2/Git-Internals-Git-Objects" rel="noopener noreferrer nofollow">introduction to Git</a>.</p>
+
+<p>Here’s a recap of some key points you learned about Git from the introduction:</p>
+
+<ul>
+	<li>
+	<p>Git objects are stored in the <code class="java">.git/objects</code> subdirectory of your project</p>
+	</li>
+	<li>
+	<p>Git objects are compressed with zlib</p>
+	</li>
+	<li>
+	<p>The file path contains a SHA-1 hash of the object contents</p>
+	</li>
+</ul>
+
+<p>Let’s start with reading the simplest type of object, the blob object.</p>
+
+<p>Note: you can use the <code class="java">git cat-file -p &lt;get object hash&gt;</code> command to view the Git object contents.</p>
+
+<h5>Objectives</h5>
+
+<p>Write a program that will ask the user for the path to the Git blob object, read the object file, decompress it with zlib, and print out the content. Java module <code class="java">java.util.zip</code> contains the zlib inflator and deflator.</p>
+
+<p>For a convenient method of inflating the compressed data, check out the <a target="_blank" href="https://www.geeksforgeeks.org/java-util-zip-inflaterinputstream-class-java/" rel="noopener noreferrer nofollow">Geeks for geeks article</a> on the subject.</p>
+
+<p>Note: you don't need to print the null byte<em>.</em></p>
+
+<h5>Example</h5>
+
+<p>The greater-than symbol followed by a space <code class="java">&gt; </code>  represents the user input. Note that it's not part of the input.</p>
+
+<pre><code class="language-no-highlight">Enter git object location:
+&gt; task/test/objects/61/8383db6d7ee3bd2e97b871205f113b6a3ba854
+blob 14
+Hello world!</code></pre>

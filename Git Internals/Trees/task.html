@@ -1,0 +1,22 @@
+<h5>Description</h5>
+
+<p>Tree objects store the file name, and the SHA-1 hash of the file content which is the same as the blob file name for this file, or another tree object if it is a subdirectory. Tree objects can hold a group of files and directories.</p>
+
+<p>Tree object file structure is a bit tricky to read. Just like any other Git object, a file tree object starts with a null-terminated header. The header is followed by one or more items consisting of a text line and 40-byte long binary SHA-1. The text line contains some permissions metadata and the file name.</p>
+
+<h5>Objectives</h5>
+
+<p>Add support for reading tree objects to your current program.</p>
+
+<h5>Example</h5>
+
+<p>The greater-than symbol followed by a space <code class="java">&gt; </code>  represents the user input. Note that it's not part of the input.</p>
+
+<pre><code class="language-no-highlight">Enter .git directory location:
+&gt; task/test
+Enter git object hash:
+&gt; 109e8050b41bd10b81be0a51a5e67327f5609551
+*TREE*
+100644 2b26c15c4375d90203783fb4c2a45ff4b571a6 main.kt
+100644 f674b5d3a4c6cef5815b4e72ef2ea1bbe46b786b readme.txt
+40000 74198c849dbbcd51d060c59253a4757eedb9bd12 some-folder</code></pre>
